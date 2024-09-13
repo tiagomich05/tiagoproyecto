@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <h1>Iniciar sesion</h1>
+        <i class="material-icons" style="font-size: 200px;">person</i>
+          <!--Email del usuario-->
+          <mat-form-field appearance="fill">
+            <mat-label>Ingrese su email</mat-label>
+            <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: usuario123@gmail.com" required>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+          </mat-form-field>
+
+         
+          <mat-form-field>
+            <mat-label>Enter your password</mat-label>
+            <input [(ngModel)]="usuarios.password" matInput [type]="hide ? 'password' : 'text'" #input minlength="6" required>
+            <button class="boton" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+              <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+            <mat-hint align="start">Minimo:6/{{input.value.length}}</mat-hint>
+          </mat-form-field>
+
+          <!--boton para enviar la informacion-->
+          <button mat-raised-button color="primary" class="boton" (click)="registrar()">Iniciar sesion</button>
+
+    </div>
+</div>
