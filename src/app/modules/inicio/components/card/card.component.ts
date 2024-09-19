@@ -37,6 +37,20 @@ export class CardComponent {
      imagen:"https://http2.mlstatic.com/D_NQ_NP_649903-MLA72059410661_102023-O.webp",
      alt:""
    },    
+   {
+    id: "camperon blanco 2021",
+    nombre: "",
+    edad: 0,
+    imagen:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKzvpIAkq8UOCGMjt0__UVkpBBKykVJendng&s",
+    alt:""
+  },  
+  {
+    id: "remera river 1996",
+    nombre: "",
+    edad: 0,
+    imagen:"https://www.thunderinternacional.com/cdn/shop/products/river-plate-1996-769181_c618ee55-94d3-40d4-a18d-25bcdfac9208.jpg?v=1652881190",
+    alt:""
+  },  
    ]
   }
 }
