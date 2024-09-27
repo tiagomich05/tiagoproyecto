@@ -2,6 +2,7 @@
     display:flex;
     padding: 10px;
     justify-content: center;
+    
 }
 h1{
     text-align: center;
@@ -12,10 +13,67 @@ h1{
     padding: 15px;
     border-radius: 9px;
     margin: 10px;
+    background-color: rgb(0, 0, 0);
+    
 }
 p{
     padding: 5px;
 }
 a{
     text-align: center;
+}
+
+.example-card{
+    background-color: rgb(206, 14, 14);
+  
+}
+.contenido img {
+    width: 100%; /* Se ajusta al ancho del contenedor */
+    height: 200px; /* Ajusta la altura según lo que necesites */
+}
+
+.body1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)), url(src/assets/fondo-inicio.jpg);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.contenedor-titulo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h2{
+color: aliceblue;
+}
+
+.card {
+    position: relative;
+   background-color: rgba(177, 143, 143, 0); /* Fondo blanco semi-transparente */
+    border-radius: 15px; /* Bordes redondeados */
+    color: aliceblue;
+    
+}
+
+.card-img {
+    width: 100%; /* Imagen a 100% del card */
+    height: 100%; /* Imagen a 100% del card */
+    object-fit: cover; /* Para cubrir el card sin deformar la imagen */
+    background-color: rgba(177, 143, 143, 0); /* Fondo blanco semi-transparente */
+    
+}
+
+.body2{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)), url(src/assets/fondo-inicio2.jpg);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }

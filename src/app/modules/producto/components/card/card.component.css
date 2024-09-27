@@ -7,3 +7,124 @@
 .list-group{
     background-color: red;
 }
+
+
+#imagen{
+    width: 400px;
+    height: 400px;
+}
+
+.img {
+    width: 300px; /* Ajusta el ancho según tus necesidades */
+    height: 400px; /* Ajusta la altura según tus necesidades */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Asegura que el contenido esté bien distribuido */
+    margin: 10px; /* Espaciado entre tarjetas */
+  }
+
+
+
+  #boton1{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #fefefe;
+    text-transform: uppercase;
+    color: #fefefe;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+  }
+  
+  #boton1::before {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 12px);
+    background-color: #212121;
+    transition: 0.3s ease-in-out;
+    transform: scaleY(1);
+  }
+  
+  #boton1:hover::before {
+    transform: scaleY(0);
+  }
+  
+  #boton1::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% - 12px);
+    background-color: #212121;
+    transition: 0.3s ease-in-out;
+    transform: scaleX(1);
+    transition-delay: 0.5s;
+  }
+  
+  #boton1:hover::after {
+    transform: scaleX(0);
+  }
+  
+  #boton1 span {
+    position: relative;
+    z-index: 3;
+  }
+  
+  .boton-style{
+    background-color: none;
+    text-decoration: none;
+    background-color: #212121;
+    border: none;
+  }
+
+  .btn-outline-primary{
+    color: antiquewhite;
+    background-color: rgb(7, 4, 4);
+    text-decoration: none;
+    border: 4px solid rgb(231, 15, 15); 
+  }
+
+  .btn-secondary {
+    background-color: rgb(0, 0, 0);
+  }
+
+  .btn-primary{
+    background-color: red;
+  }
+
+  #imagen1{
+    width: 300px;
+    height: 300px;
+  }
+
+  .body1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)), url(src/assets/fondo-inicio.jpg);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: repeat;
+    
+    
+}
+.card {
+  position: relative;
+ background-color: rgba(177, 143, 143, 0); /* Fondo blanco semi-transparente */
+  border-radius: 15px; /* Bordes redondeados */
+  color: aliceblue;
+  
+}
+
+.card-img {
+  width: 100%; /* Imagen a 100% del card */
+  height: 100%; /* Imagen a 100% del card */
+  object-fit: cover; /* Para cubrir el card sin deformar la imagen */
+  background-color: rgba(177, 143, 143, 0); /* Fondo blanco semi-transparente */
+
+}

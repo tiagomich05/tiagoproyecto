@@ -45,7 +45,7 @@ export class CardComponent {
     alt:""
   },  
   {
-    id: "remera river 1996",
+    id: "remera titular de river 1996",
     nombre: "",
     edad: 0,
     imagen:"https://www.thunderinternacional.com/cdn/shop/products/river-plate-1996-769181_c618ee55-94d3-40d4-a18d-25bcdfac9208.jpg?v=1652881190",
@@ -54,3 +54,4 @@ export class CardComponent {
    ]
   }
 }
+
