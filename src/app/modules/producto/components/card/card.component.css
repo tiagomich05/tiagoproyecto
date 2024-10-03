@@ -1,0 +1,9 @@
+.col-lg-12{
+    justify-content: center;
+    display: flex;
+
+}
+
+.list-group{
+    background-color: red;
+}
