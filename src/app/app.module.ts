@@ -15,6 +15,7 @@ import { environment } from 'src/environments/environment';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFireModule } from '@angular/fire/compat';
 import {AngularFireStorageModule} from '@angular/fire/compat/storage';
+import { ComponentsComponent } from './modules/sobrenosotros/components/components.component';
 
 
 
@@ -22,6 +23,7 @@ import {AngularFireStorageModule} from '@angular/fire/compat/storage';
 @NgModule({
   declarations: [
     AppComponent,
+    
     
     
   ],
