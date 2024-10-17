@@ -1,0 +1,93 @@
+
+.card {
+    display: flex;
+    height: 70px;
+    align-items: center;
+    width: 270px;
+    background-color: black;
+
+  
+}
+  
+
+
+
+
+  .body1{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)), url(src/assets/riverfooter.webp);
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: repeat;
+    height: 300px;
+    
+}
+
+.footer {
+  background-color: #f8f8f8; /* Cambia el color de fondo si es necesario */
+  color: #ffffff;
+  padding: 20px 0;
+  width: 100%;
+}
+
+.footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+.text-body-secondary {
+  color: #ffffff !important;
+}
+
+.nav a {
+  color: #ffffff;
+}
+
+.nav a:hover {
+  color: #ffffff;
+}
+
+svg {
+  fill: #ffffff
+}
+
+#red{
+  padding: 10px;
+  margin: 10px;
+  color: red;
+  
+  display: flex;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
