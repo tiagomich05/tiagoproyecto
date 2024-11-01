@@ -19,3 +19,23 @@ a{
     height: 700px;
 }
 
+
+  .p{
+    text-align: center;
+    justify-content: center;
+    padding-left: 20%;
+        text-align: center;
+        padding-right: 20%;
+  }
+
+  @media (min-width: 300px) and (max-width: 700px) {
+    img {
+   text-align: center;
+   justify-content: center;
+   display: flex; 
+   justify-content: center; 
+   align-items: center;
+  
+  }
+}
+  
