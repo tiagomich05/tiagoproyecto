@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ComponentsComponent {
 
+enviar(){
+alert('Su mensaje fue enviado')
 }
+
+
+
+}
+
+
 

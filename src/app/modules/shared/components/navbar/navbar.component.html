@@ -3,40 +3,47 @@
 
 
 
-<mat-toolbar >
-    <button id="menuSecciones" mat-icon-button class="example-icon" [matMenuTriggerFor]="secciones" >
-        <mat-icon>menu</mat-icon>
-    </button>
-    <mat-menu #secciones="matMenu">
-        <button mat-menu-item routerLink="/inicio|">Inicio</button>
-        <button mat-menu-item [matMenuTriggerFor]="producto">Productos</button>
-    </mat-menu>
-    <p><img src="https://fontmeme.com/permalink/240927/aaa246ef6c6493aba2c2671a546c0319.png" alt="fuentes-de-grafiti" border="0"></p>
-    <button id="menuInicio" mat-button routerLink="/inicio">Inicio</button>
+    <mat-toolbar>
+       
+        <mat-menu #secciones="matMenu">
+            
+            <button mat-menu-item [matMenuTriggerFor]="producto">Productos</button>
+        </mat-menu>
+        
+    <div class="contenedor"><a href="inicio" ><img src="https://fontmeme.com/permalink/240927/aaa246ef6c6493aba2c2671a546c0319.png" alt="fuentes-de-grafiti" border="0"></a></div> 
+        
+    
+        <button id="menuProducto" mat-button [matMenuTriggerFor]="producto">Productos</button>
+        <mat-menu #producto="matMenu">
+            <button mat-menu-item routerLink="/producto">General</button>
+            <button mat-menu-item routerLink="/remeras">remeras</button>
+            <button mat-menu-item routerLink="/camperones">camperones</button>
+            <button mat-menu-item routerLink="/pantalones">pantalones</button>
+            <button mat-menu-item routerLink="/buzoa">buzos</button>
+        </mat-menu>
+    
+        <button id="sobrenosotros" mat-button routerLink="/sobrenosotros">sobre nosotros</button>
+    
+        <button id="contacto" mat-button routerLink="/contacto">contacto</button>
+    
+        <span class="example-spacer"></span>
+    
+        <button id="boton" mat-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
+        <mat-menu #usuario="matMenu">
+            <button mat-menu-item (click)="iniciar()"  *ngIf="logueado" routerLink="/registro">registrarse</button>
+            <button mat-menu-item (click)="iniciar()"  *ngIf="logueado" routerLink="/inicio-sesion">iniciar sesion</button>
+            <button mat-menu-item (click)="cerrarSesion()"  *ngIf="deslogueado">Cerrar sesion</button>
+        </mat-menu>
+        <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+            <mat-icon>shopping_cart</mat-icon>
+        </button>
+    </mat-toolbar>
+    
 
-    <button id="menuProducto" mat-button [matMenuTriggerFor]="producto">Productos</button>
-    <mat-menu #producto="matMenu">
-        <button mat-menu-item routerLink="/producto">General</button>
-        <button mat-menu-item routerLink="/remeras">remeras</button>
-        <button mat-menu-item routerLink="/camperones">camperones</button>
-        <button mat-menu-item routerLink="/pantalones">pantalones</button>
-        <button mat-menu-item routerLink="/buzoa">buzos</button>
-    </mat-menu>
 
-    <button id="sobrenosotros" mat-button routerLink="/sobrenosotros">sobre nosotros</button>
 
-    <button id="contacto" mat-button routerLink="/contacto">contacto</button>
 
-    <span class="example-spacer"></span>
 
-    <button mat-button [matMenuTriggerFor]="usuario"><mat-icon>person</mat-icon></button>
-    <mat-menu #usuario="matMenu">
-        <button mat-menu-item (click)="iniciar()"  *ngIf="logueado" routerLink="/registro">registrarse</button>
-        <button mat-menu-item (click)="iniciar()"  *ngIf="logueado" routerLink="/inicio-sesion">iniciar sesion</button>
-        <button mat-menu-item (click)="cerrarSesion()"  *ngIf="deslogueado">Cerrar sesion</button>
-    </mat-menu>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>shopping_cart</mat-icon>
-    </button>
-</mat-toolbar>
+
+    
 

@@ -7,7 +7,7 @@ a{
     display:flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)), url(src/assets/gallardo.jpg);
+    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)), url(src/assets/creer.png);
     background-size: 100%;
     background-position: center center;
     background-repeat: repeat;

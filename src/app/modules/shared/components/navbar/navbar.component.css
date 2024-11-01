@@ -1,42 +1,65 @@
 .example-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
 
-  }
-
-  /* Declaramos con palabra reservada MEDIA*/
-
-  @media (min-width: 300px) and (max-width: 700px){
-    mat-toolbar{
-      background-color: rgb(248, 142, 159);
-    }
-     
-    #menuInicio{
-      display: none;
-    }
-
-    #menuProducto{
-      display: none;
-    }
-  
 }
 
-  @media (min-width: 700px){
-    mat-toolbar{
-      background-color: rgb(224, 14, 14);
-      
-    }
-  
-  #menuSecciones{
-     display: none;
-  }
+#abre {
+  display: none;
+}
+
+/* Declaramos con palabra reservada MEDIA*/
+
+@media (min-width: 300px) and (max-width: 700px) {
+  mat-toolbar {
+    background-color: rgb(214, 20, 52);
+
   }
 
-  button::mat-menu-item{
-    font-family: "Protest Guerrilla", sans-serif;
+  mat-toolbar {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  
-  a{
-    text-align: right;
-    
+  .example-spacer {
+    display: none;
   }
+
+  #menuProducto,
+  #sobrenosotros,
+  #contacto {
+    width: 100%;
+    text-align: left;
+    color: red;
+  }
+
+  #logoImg {
+    max-width: 80%;
+    margin: 10px auto;
+  }
+
+  #boton {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    font-size: 36px;
+    cursor: pointer;
+  }
+
+  .example-icon {
+    display: none;
+  }
+
+
+
+
+}
+
+button::mat-menu-item {
+  font-family: "Protest Guerrilla", sans-serif;
+}
+
+
+a {
+  text-align: right;
+
+}

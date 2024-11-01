@@ -17,10 +17,11 @@ h1{
     
 }
 p{
-    padding: 5px;
+    padding: 10px;
 }
 a{
     text-align: center;
+    padding-left: 10%;
 }
 
 .example-card{
@@ -39,7 +40,7 @@ a{
     background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)), url(src/assets/fondo-inicio.jpg);
     background-size: 100%;
     background-position: center center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 .contenedor-titulo{
     display:flex;
@@ -50,6 +51,7 @@ a{
 
 h2{
 color: aliceblue;
+padding-left: 10%;
 }
 
 .card {
@@ -75,5 +77,16 @@ color: aliceblue;
     background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)), url(src/assets/fondo-inicio2.jpg);
     background-size: 100%;
     background-position: center center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
+    text-align: center;
+}
+@media (min-width: 300px) and (max-width: 700px){
+    img{
+        padding-left: 20%;
+        width: 150px;
+        height: 150px;
+       
+        
+   
+}
 }

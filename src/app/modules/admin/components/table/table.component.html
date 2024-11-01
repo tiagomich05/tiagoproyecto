@@ -1,3 +1,4 @@
+<br><br><br><br><br>
 <table class="table">
   <thead>
     <tr>
@@ -84,7 +85,7 @@
 
         <div class="mb-3">
           <label class="form-label">Ingrese una imagen:</label>
-          <input class="form-control" type="text" formControlName="imagen" placeholder="...">
+          <input  type="file" accept="imagen/*" placeholder="..." (change)="cargarImagen($event)">
         </div>
 
         <div class="mb-3">
@@ -149,7 +150,7 @@
 
         <div class="mb-3">
           <label class="form-label">Ingrese una imagen:</label>
-          <input class="form-control" type="text" formControlName="imagen" placeholder="{{productoEdit.imagen}}">
+          <input  type="file" accept="imagen/*" placeholder="..." (change)="cargarImagen($event)">
         </div>
 
         <div class="mb-3">
