@@ -14,7 +14,9 @@ import { CrudService } from 'src/app/modules/admin/services/crud.service';
 export class CardComponent {
 //PROPIEDAD PUBLICA (TIPO ARRAY)
   public info:Pais[];
-  constructor(){
+  constructor(
+    
+  ){
    this.info=[
      {
        id: "remera titular de river 2024",

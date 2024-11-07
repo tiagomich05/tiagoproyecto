@@ -22,6 +22,7 @@
       <td>{{producto.precio}}</td>
       <td>{{producto.descripcion}}</td>
       <td>{{producto.categoria}}</td>
+      <td>{{producto.stock}}</td>
       <!--Acciones-->
       <td>
         <button id="btn-edit" title="Editar" class="btn btn-outline-warning" data-bs-toggle="modal"
@@ -141,10 +142,11 @@
         <div class="mb-3">
           <label class="form-label">Seleccione una categoría:</label>
           <select class="form-control form-select" formControlName="categoria" aria-label="Default select example">
-            <option disabled selected>Elija una opción</option>
-            <option value="alimentacion">Alimentación</option>
-            <option value="indumentaria">Indumentaria</option>
-            <option value="juguetes">Juguete</option>
+            <option selected>elija una opcion</option>
+            <option value="remeras">remeras</option>
+            <option value="camperones">camperones</option>
+            <option value="pantalones">pantalones</option>
+            <option value="buzoa">buzos</option>
           </select>
         </div>
 
@@ -157,7 +159,10 @@
           <label class="form-label">Ingrese texto alternativo:</label>
           <input class="form-control" type="text" formControlName="alt" placeholder="{{productoEdit.alt}}">
         </div>
-
+  <div class="mb-3">
+    <label for="form-label"> ingrese stock en su producto</label>
+    <input type="form-control" type="number" formControlName="stock">
+  </div>
 
       </div>
 
