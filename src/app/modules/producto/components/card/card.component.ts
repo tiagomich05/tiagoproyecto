@@ -39,7 +39,9 @@ export class CardComponent {
     this.servicioCrud.obtenerProductos
       ().subscribe(producto => {
         this.coleccionProductos = producto;
+
       })
+      this.servicioCarrito.iniciarCart()
   }
 
   // Función para modal que muestre la información de un producto en específico

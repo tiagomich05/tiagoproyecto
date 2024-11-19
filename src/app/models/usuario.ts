@@ -1,3 +1,4 @@
+//crea un objeto para la interfaz
 export interface Usuario {
     uid:string | any; //atributos de tipo any = reciben valores indefinidos
     nombre:string;

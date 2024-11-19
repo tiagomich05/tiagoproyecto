@@ -7,10 +7,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
+//exporta la clase table
 export class TableComponent {
   //Crear collecion de productos del tipo producto -> lo definimos como un array
   coleccionProductos: Producto[] = [];
-
+//el comando boolean sirve para presentar valores, en este caso un valor falso
   modalVisibleProducto: boolean = false;
 
   productoSeleccionado!: Producto
@@ -19,8 +20,11 @@ export class TableComponent {
 
   imagen!: string; //obtendra la ruta de la iamgen
 
+  //formgroup maneja los datos para todos los formularios
   producto = new FormGroup({
-    nombre: new FormControl('', Validators.required),
+    //el formcontrol sirve para que los valores escritos esten en el elemento DOM
+    //y el DOM sirve para controlar y manipular un objeto
+    nombre: new FormControl('', Validators.required),//comprueba que un campo de un formulario esté llena
     precio: new FormControl(0, Validators.required),
     descripcion: new FormControl('', Validators.required),
     categoria: new FormControl('', Validators.required),
@@ -29,13 +33,19 @@ export class TableComponent {
     stock: new FormControl(0, Validators.required)
   })
   constructor(public servicioCrud: CrudService) { }
-
+//NGOINIT método que se ejecuta una sola vez en el ciclo de vida de un componente,
+//después de que el constructor y los datos de entrada hayan sido inicializados
   ngOnInit(): void {
+    //Llamada al servicio 'servicioCrud' para obtener los productos.
+  // El método 'obtenerProductos()' retorna un observable que emitirá la lista de productos una vez que se haya completado la solicitud.
     this.servicioCrud.obtenerProductos().subscribe(producto => {
       this.coleccionProductos = producto;
     })
   }
-
+  /**
+     Método asíncrono para agregar un producto.
+     Llama al servicio para agregar un producto y actualiza la colección de productos.
+   */
   async agregarProducto() {
     if (this.producto.valid) {
       let nuevoProducto: Producto = {
@@ -158,7 +168,7 @@ export class TableComponent {
       })
   }
 
-
+//Funcion pafa actualizar la modificacion de los datos del producto
   actualizarProducto(datos: Producto) {
     this.servicioCrud.modificarProducto(this.productoSeleccionado.idProducto, datos)
       .then(producto => {
@@ -177,7 +187,7 @@ export class TableComponent {
 
     //variable para crear un nuevo objeto de tipo "archivo" o "fila" y poder leerlo
     let reader = new FileReader();
-
+3
     if (archivo != undefined) {
       /*
       llamamos a metodo readAsDataurl para leer toda la informacion recibida.
@@ -205,3 +215,7 @@ export class TableComponent {
   }
 
 }
+
+
+
+

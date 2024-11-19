@@ -8,6 +8,7 @@ import { Router } from '@angular/router';
 import * as CryptoJS from 'crypto-js';
 //Importamos paqueteria de SweetAlert para alertas personalizadas
 import Swal from 'sweetalert2';
+import { FirestoreService } from 'src/app/modules/shared/services/firestore.service';
 
 
 @Component({
@@ -24,7 +25,7 @@ usuarios:Usuario= {
   nombre:'',
   apellido:'',
   email:'',
-  rol:'vis',
+  rol:'usuario',
   password:'',
 }
 
@@ -34,7 +35,8 @@ coleccionUsuarios:Usuario[] = [];
 //Eeferenciamos a nuestros servicios
 constructor(
   public servicioAuth: AuthService,
-  public servicioRutas: Router
+  public servicioRutas: Router,
+  public serviciofirestore: FirestoreService
 ){
 }
 
@@ -54,7 +56,7 @@ async registrar(){
     password: this.usuarios.password
   }
 
-  this.usuarios.password = CryptoJS.SHA256(this.usuarios.password).toString();
+  
   //constante "respue" = resgarda una respuesta
   const respue = await this.servicioAuth.registrar(credenciales.email, credenciales.password)
   //encapsula la respuesta anterior
@@ -78,10 +80,21 @@ async registrar(){
     });
   })
 
+  const uid = await this.servicioAuth.obtenerUid();
+this.usuarios.uid = uid;
+
+
+  this.usuarios.password = CryptoJS.SHA256(this.usuarios.password).toString();
     // enviamos los nuevos registros por medio del metodo push a la coleccion
     //this.coleccionUsuarios.push(credenciales);
     //console.log(credenciales)
-//
+this.guardarusuario();
+this.limpiarInputs();
+}
+async guardarusuario(){
+  this.serviciofirestore.agregarUsuario(this.usuarios, this.usuarios.uid)
+  .then(res=>{console.log(this.usuarios)})
+  .catch(error=>{console.log('error'+error)})
 }
    limpiarInputs(){
     const inputs = {

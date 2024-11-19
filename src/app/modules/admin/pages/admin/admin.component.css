@@ -1,41 +1,46 @@
-.container{
-    display: flex;
-    padding: 1rem;
-    text-align: center;
-    justify-content: space-around;
-}
-a{
-    text-align: center;
+/* Estilos generales para la clase .container */
+.container {
+  display: flex; /* Utiliza el modelo de caja flexible (Flexbox) para la distribución de los elementos */
+  padding: 1rem; /* Añade un espacio interno (padding) de 1 rem alrededor de los elementos dentro del contenedor */
+  text-align: center; /* Centra el contenido de texto dentro de los elementos de .container */
+  justify-content: space-around; /* Distribuye los elementos hijos con espacio igual entre ellos */
 }
 
-.body1{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(rgba(0 0 0 / .8),rgba(0 0 0 / .8)), url(src/assets/maidanafondo.jpg);
-    background-size: 100%;
-    background-position: center center;
-    background-repeat: repeat;
-    height: 700px;
+/* Estilos para las etiquetas <a> */
+a {
+  text-align: center; /* Centra el texto dentro de los enlaces */
 }
 
+/* Estilos para la clase .body1 */
+.body1 {
+  display: flex; /* Utiliza el modelo de caja flexible para que los hijos se alineen con Flexbox */
+  justify-content: center; /* Alinea los elementos hijos en el centro de manera horizontal */
+  align-items: center; /* Alinea los elementos hijos en el centro de manera vertical */
+  background: linear-gradient(rgba(0 0 0 / .8), rgba(0 0 0 / .8)), url(src/assets/maidanafondo.jpg); /* Aplica un fondo con un gradiente negro semi-transparente encima de una imagen */
+  background-size: 100%; /* Asegura que la imagen de fondo ocupe el 100% del ancho del contenedor */
+  background-position: center center; /* Centra la imagen de fondo tanto horizontal como verticalmente */
+  background-repeat: repeat; /* Hace que la imagen de fondo se repita si no cubre todo el espacio */
+  height: 700px; /* Define una altura de 700 píxeles para el contenedor */
+}
 
-  .p{
-    text-align: center;
-    justify-content: center;
-    padding-left: 20%;
-        text-align: center;
-        padding-right: 20%;
-  }
+/* Estilos para los párrafos con la clase .p */
+.p {
+  text-align: center; /* Centra el texto dentro de los elementos <p> */
+  justify-content: center; /* Centra los elementos de manera horizontal (aunque no se utiliza aquí, ya que text-align es suficiente) */
+  padding-left: 20%; /* Añade un espacio de 20% desde el borde izquierdo */
+  text-align: center; /* Asegura que el texto esté centrado dentro del párrafo */
+  padding-right: 20%; /* Añade un espacio de 20% desde el borde derecho */
+}
 
-  @media (min-width: 300px) and (max-width: 700px) {
-    img {
-   text-align: center;
-   justify-content: center;
-   display: flex; 
-   justify-content: center; 
-   align-items: center;
-  
+/* Estilos de media query para pantallas con un ancho de entre 300px y 700px */
+@media (min-width: 300px) and (max-width: 700px) {
+  /* Estilos específicos para imágenes en pantallas pequeñas */
+  img {
+      text-align: center; /* Centra el texto dentro de las imágenes (aunque no es común en imágenes) */
+      justify-content: center; /* Alinea el contenido dentro de la imagen de manera horizontal (aunque no aplica directamente a <img>) */
+      display: flex; /* Utiliza el modelo de caja flexible para el elemento */
+      justify-content: center; /* Centra el contenido dentro de la imagen */
+      align-items: center; /* Centra el contenido dentro de la imagen verticalmente */
   }
 }
   

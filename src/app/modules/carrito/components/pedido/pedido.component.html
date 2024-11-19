@@ -1,1 +1,22 @@
-<p>pedido works!</p>
+<div class="container">
+    <h2>carrito de compras</h2>
+    <div class="row">
+        <div class="col-lg-4">
+            <ul class="list-group">
+                <div class="row">
+                     <!-- Recorre la lista de productos (o pedidos) y genera un <li> para cada uno -->
+                <li class="list-group-item" *ngFor="let pedido of productos">
+                    <!-- Muestra la cantidad del producto, nombre y el total -->
+                    {{pedido.cantidad}} {{pedido.producto.nombre}} - ${{pedido.total}}
+
+                    <!-- Botón para quitar el producto del carrito -->
+                    <button class="btn btn-danger" (click)="quitarPedido(pedido)">
+                        <!-- Icono de eliminar producto con Material Icons -->
+                        <mat-icon>delete</mat-icon>
+                        </button>
+                </li>
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>

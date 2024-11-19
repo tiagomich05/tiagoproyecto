@@ -11,7 +11,7 @@ import { AuthService } from 'src/app/modules/autentificacion/services/auth.servi
 })
 export class PedidoComponent {
   productos:Pedido[] = [];
-
+//los servicios del carrito son llamados del constructor y son utilizados en cualquier parte de la pagina
   constructor(
     public servicioCarrito:CarritoService,
     public servicioAuth: AuthService
@@ -29,10 +29,14 @@ export class PedidoComponent {
             this.servicioCarrito.obtenerCarrito().subscribe(producto =>
               this.productos = producto
             )
+          }else{
+            console.error('No se pudo obtener el usuario')
           }
         })
       }
     })
   }
-  
+  quitarPedido(pedido:Pedido){
+    this.servicioCarrito.borrarPedido(pedido)
+  }
 }

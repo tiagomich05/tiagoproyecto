@@ -15,6 +15,7 @@
           <!--Apellido del usuario-->
           <mat-form-field appearance="fill">
             <mat-label>Ingrese su apellido:</mat-label>
+            <!--ng model: enlaza los datos del formulario y una propiedad de un componente de angular-->
             <input [(ngModel)]="usuarios.apellido" matInput placeholder="Ej:pepe" required>
             <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
             
@@ -34,6 +35,7 @@
             <button class="boton" matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
               <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
             </button>
+            <!--input.value.length se usa para mostrar el valor de un campo de entrada-->
             <mat-hint align="start">Minimo:6/{{input.value.length}}</mat-hint>
           </mat-form-field>
 

@@ -1,67 +1,72 @@
+/* Clase que aplica un espaciado flexible para elementos con esta clase */
 .example-spacer {
-  flex: 1 1 auto;
-
+  flex: 1 1 auto;  /* Hace que el elemento ocupe todo el espacio disponible, con flexibilidad */
 }
 
+/* Elemento con id "abre" estará oculto por defecto */
 #abre {
-  display: none;
+  display: none;  /* El elemento no se muestra en la página */
 }
 
-/* Declaramos con palabra reservada MEDIA*/
-
+/* Media Query para dispositivos con ancho de pantalla entre 300px y 700px */
 @media (min-width: 300px) and (max-width: 700px) {
+  /* Estilo para mat-toolbar (barra de herramientas) en pantallas pequeñas */
   mat-toolbar {
-    background-color: rgb(214, 20, 52);
-#contacto{
-  display: none;
-}
+    background-color: rgb(214, 20, 52);  /* Cambia el color de fondo a un rojo específico */
   }
 
-  mat-toolbar {
-    flex-direction: column;
-    align-items: flex-start;
+  /* Estilo para ocultar el elemento con id "contacto" en pantallas pequeñas */
+  #contacto {
+    display: none;  /* El elemento "contacto" no se muestra */
   }
 
+  /* Cambiar la disposición de los elementos dentro de mat-toolbar */
+  mat-toolbar {
+    flex-direction: column;  /* Cambia la dirección del contenido dentro de la barra de herramientas a columna */
+    align-items: flex-start;  /* Alinea los elementos al principio (a la izquierda) */
+  }
+
+  /* Ocultar los elementos con clase .example-spacer en pantallas pequeñas */
   .example-spacer {
-    display: none;
+    display: none;  /* No se muestra el espaciador en pantallas pequeñas */
   }
 
+  /* Estilo para los elementos con ids específicos: menuProducto, sobrenosotros y contacto */
   #menuProducto,
   #sobrenosotros,
   #contacto {
-    width: 100%;
-    text-align: left;
-    color: red;
+    width: 100%;  /* Estos elementos ocupan el 100% del ancho disponible */
+    text-align: left;  /* Alineación de texto a la izquierda */
+    color: red;  /* Cambia el color del texto a rojo */
   }
 
+  /* Estilo para la imagen con id "logoImg" en pantallas pequeñas */
   #logoImg {
-    max-width: 80%;
-    margin: 10px auto;
+    max-width: 80%;  /* Limita el tamaño máximo de la imagen al 80% del ancho disponible */
+    margin: 10px auto;  /* Agrega un margen de 10px en la parte superior e inferior, y centra la imagen horizontalmente */
   }
 
+  /* Estilo para el botón con id "boton", se posiciona de forma fija en la parte superior derecha */
   #boton {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    font-size: 36px;
-    cursor: pointer;
+    position: fixed;  /* El botón se posiciona de forma fija en la pantalla */
+    top: 10px;  /* Alineación 10px desde la parte superior */
+    right: 10px;  /* Alineación 10px desde el borde derecho */
+    font-size: 36px;  /* Tamaño de fuente grande para el botón */
+    cursor: pointer;  /* Cambia el cursor a una mano al pasar sobre el botón */
   }
 
+  /* Estilo para ocultar los iconos con clase .example-icon en pantallas pequeñas */
   .example-icon {
-    display: none;
+    display: none;  /* Los iconos no se muestran en pantallas pequeñas */
   }
-
-
-
-
 }
 
+/* Estilo para los elementos de menú dentro de un botón */
 button::mat-menu-item {
-  font-family: "Protest Guerrilla", sans-serif;
+  font-family: "Protest Guerrilla", sans-serif;  /* Define la tipografía del menú dentro del botón */
 }
 
-
+/* Estilo para los enlaces (etiquetas <a>) */
 a {
-  text-align: right;
-
+  text-align: right;  /* Alinea el texto de los enlaces a la derecha */
 }

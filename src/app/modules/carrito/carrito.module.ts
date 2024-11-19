@@ -3,7 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { CarritoRoutingModule } from './carrito-routing.module';
 import { PedidoComponent } from './components/pedido/pedido.component';
-
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,7 +12,15 @@ import { PedidoComponent } from './components/pedido/pedido.component';
   ],
   imports: [
     CommonModule,
-    CarritoRoutingModule
+    CarritoRoutingModule,
+    MatIconModule,
+    ReactiveFormsModule
+  ],
+  exports:[
+    MatIconModule,
+    ReactiveFormsModule
   ]
 })
+
+
 export class CarritoModule { }

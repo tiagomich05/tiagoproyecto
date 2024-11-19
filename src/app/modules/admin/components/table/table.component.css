@@ -1,93 +1,102 @@
-img{
-    width: 150px;
+/* Estilo general para las imágenes dentro de la página */
+img {
+  width: 150px; /* Establece un tamaño fijo de 150px para todas las imágenes */
 }
 
-button{
-    background-color: red;
+/* Estilo para todos los botones */
+button {
+  background-color: red; /* El color de fondo de todos los botones será rojo */
 }
 
-mat-icon{
-    color: aliceblue;
+/* Estilo para los iconos de Material Design (mat-icon) */
+mat-icon {
+  color: aliceblue; /* Los iconos de mat-icon tendrán el color de texto aliceblue */
 }
 
+/* Estilo personalizado para el botón con la clase .button */
 .button {
-    text-align: center;
-    all: unset;
-    display: flex;
-    align-items: center;
-    position: relative;
-    padding: 0.6em 2em;
-    border:red;
-    border-radius: 0.25em;
-    color: red;
-    font-size: 1.5em;
-    font-weight: 600;
-    cursor: pointer;
-    overflow: hidden;
-    transition: border 300ms, color 300ms;
-    user-select: none;
-    
-  }
-  
-  .button p {
-    z-index: 1;
-  }
-  
-  .button:hover {
-    color: #212121;
-  }
-  
-  .button:active {
-    border-color: red;
-  }
-  
-  .button::after, .button::before {
-    content: "";
-    position: absolute;
-    width: 9em;
-    aspect-ratio: 1;
-    background: red;
-    opacity: 50%;
-    border-radius: 50%;
-    transition: transform 500ms, background 300ms;
-  }
-  
-  .button::before {
-    left: 0;
-    transform: translateX(-8em);
-  }
-  
-  .button::after {
-    right: 0;
-    transform: translateX(8em);
-  }
-  
-  .button:hover:before {
-    transform: translateX(-1em);
-  }
-  
-  .button:hover:after {
-    transform: translateX(1em);
-  }
-  
-  .button:active:before,
-  .button:active:after {
-    background: red;
-    
+  text-align: center; /* Centra el texto dentro del botón */
+  all: unset; /* Resetea todos los estilos predeterminados del botón (como bordes, padding, etc.) */
+  display: flex; /* Utiliza el modelo de diseño flexbox para el botón */
+  align-items: center; /* Centra el contenido (texto) verticalmente dentro del botón */
+  position: relative; /* Necesario para posicionar los pseudo-elementos ::before y ::after de manera absoluta */
+  padding: 0.6em 2em; /* Establece el padding alrededor del contenido del botón */
+  border: red; /* El borde del botón será de color rojo */
+  border-radius: 0.25em; /* Bordes redondeados con un radio de 0.25em */
+  color: red; /* El color del texto del botón será rojo */
+  font-size: 1.5em; /* El tamaño de la fuente dentro del botón será de 1.5em */
+  font-weight: 600; /* El texto será de peso 'seminegrita' */
+  cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el botón (indica que es clickeable) */
+  overflow: hidden; /* Oculta cualquier contenido que se desborde fuera del área del botón */
+  transition: border 300ms, color 300ms; /* Añade una transición suave de 300ms para el borde y el color */
+  user-select: none; /* Evita que el texto dentro del botón sea seleccionado por el usuario */
+}
+
+/* Estilo para el texto dentro del botón */
+.button p {
+  z-index: 1; /* Asegura que el texto siempre esté sobre otros elementos, como los círculos generados con ::before y ::after */
+}
+
+/* Estilo cuando el botón es hover (cuando el cursor está sobre el botón) */
+.button:hover {
+  color: #212121; /* Cambia el color del texto a un gris oscuro cuando se pasa el cursor sobre el botón */
+}
+
+/* Estilo cuando el botón es activado (cuando el usuario hace clic sobre él) */
+.button:active {
+  border-color: red; /* Cambia el borde a color rojo cuando el botón es presionado */
+}
+
+/* Pseudo-elementos ::before y ::after para crear círculos animados dentro del botón */
+.button::after, .button::before {
+  content: ""; /* Los pseudo-elementos no tienen contenido visible por sí mismos */
+  position: absolute; /* Los posiciona de manera absoluta dentro del contenedor del botón */
+  width: 9em; /* Ancho de los círculos es 9em */
+  aspect-ratio: 1; /* El aspecto es cuadrado (el ancho y la altura son iguales) */
+  background: red; /* El fondo de los círculos es de color rojo */
+  opacity: 50%; /* Hace que los círculos tengan un 50% de opacidad */
+  border-radius: 50%; /* Hace que los círculos tengan bordes redondeados (forma circular) */
+  transition: transform 500ms, background 300ms; /* Añade una transición suave para los cambios de posición y color */
+}
+
+/* Estilo para el pseudo-elemento ::before (círculo a la izquierda) */
+.button::before {
+  left: 0; /* Lo posiciona a la izquierda del botón */
+  transform: translateX(-8em); /* Lo desplaza 8em hacia la izquierda fuera del botón */
+}
+
+/* Estilo para el pseudo-elemento ::after (círculo a la derecha) */
+.button::after {
+  right: 0; /* Lo posiciona a la derecha del botón */
+  transform: translateX(8em); /* Lo desplaza 8em hacia la derecha fuera del botón */
+}
+
+/* Estilo para los círculos cuando el botón está en estado hover (cuando el cursor está sobre él) */
+.button:hover::before {
+  transform: translateX(-1em); /* El círculo izquierdo se mueve más cerca del botón */
+}
+
+.button:hover::after {
+  transform: translateX(1em); /* El círculo derecho se mueve más cerca del botón */
+}
+
+/* Estilo para los círculos cuando el botón es activado (cuando el usuario hace clic sobre él) */
+.button:active::before,
+.button:active::after {
+  background: red; /* Los círculos mantienen el fondo rojo durante el clic */
+}
+
+/* Estilos específicos para pantallas con un ancho de entre 300px y 700px (dispositivos móviles o tabletas) */
+@media (min-width: 300px) and (max-width: 700px) {
+  /* Estilo para las imágenes dentro de este rango de pantallas */
+  img {
+      padding-left: 20%; /* Añade un espacio de 20% a la izquierda de la imagen */
+      text-align: center; /* Centra la imagen horizontalmente */
+      padding-right: 20%; /* Añade un espacio de 20% a la derecha de la imagen */
   }
 
-  @media (min-width: 300px) and (max-width: 700px){
-    img{
-        padding-left: 20%;
-        text-align: center;
-        padding-right: 20%;
-       
-        
-   
+  /* Estilo para el contenedor con la clase .mb-3 */
+  .mb-3 {
+      height: 200px; /* Asigna una altura de 200px a los elementos con la clase .mb-3 */
   }
-  .mb-3{
-    height: 200px;
-    
-  }
-  
-  }
+}

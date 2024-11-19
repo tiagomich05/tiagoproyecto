@@ -12,143 +12,152 @@
 
 
 
-body {
-    font-family: Arial, sans-serif;
-   
-    margin: 0;
-    padding: 20px;
-    position: relative;
-    background-color: rgba(177, 143, 143, 0); /* Fondo blanco semi-transparente */
-     border-radius: 15px; /* Bordes redondeados */
-     color: aliceblue;
-
+/* Estilos globales para el cuerpo de la página */
+body { 
+  font-family: Arial, sans-serif; /* Establece la fuente principal de la página */
+  margin: 0; /* Elimina los márgenes por defecto del navegador */
+  padding: 20px; /* Agrega un espaciado de 20px en todos los bordes */
+  position: relative; /* Permite un control más preciso de los elementos posicionados dentro del cuerpo */
+  background-color: rgba(177, 143, 143, 0); /* Fondo blanco semi-transparente */
+  border-radius: 15px; /* Redondea los bordes del contenedor */
+  color: aliceblue; /* Color de texto blanco con tonalidad azul */
 }
 
-
+/* Estilo para el encabezado de la sección de contacto */
 .contacta {
-  text-align: center;
-  margin-bottom: 20px;
-  font-size: 2em;
-  color: #333;
+text-align: center; /* Centra el texto */
+margin-bottom: 20px; /* Espaciado en la parte inferior */
+font-size: 2em; /* Tamaño de fuente más grande */
+color: #333; /* Color gris oscuro para el texto */
 }
 
+/* Estilo para un subtítulo o mensaje de la sección de contacto */
 .conta2 {
-  text-align: center;
-  font-size: 2em;
-  color: #d11818;
-  margin-bottom: 10px;
+text-align: center; /* Centra el texto */
+font-size: 2em; /* Tamaño de fuente más grande */
+color: #d11818; /* Color rojo brillante para resaltar */
+margin-bottom: 10px; /* Espaciado en la parte inferior */
 }
 
+/* Estilo para el formulario de contacto */
 .contact-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
- 
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(223, 8, 8, 0.1);
+max-width: 600px; /* Establece el ancho máximo del formulario */
+margin: 0 auto; /* Centra el formulario horizontalmente */
+padding: 20px; /* Espaciado interno del formulario */
+border-radius: 8px; /* Bordes redondeados */
+box-shadow: 0 4px 8px rgba(223, 8, 8, 0.1); /* Sombra ligera alrededor del formulario */
 }
 
+/* Estilo para cada campo flotante del formulario */
 .form-floating {
-  margin-bottom: 15px;
+margin-bottom: 15px; /* Espaciado inferior entre los campos */
 }
 
+/* Estilo adicional para ajustar el texto dentro de los campos */
 .font {
-  justify-content: bottom;
-  text-align: flex;
-  
+justify-content: bottom; /* Justifica el contenido hacia abajo */
+text-align: flex; /* Alineación de texto flexible (no estándar, posiblemente un error) */
 }
 
+/* Estilo para los campos de texto del formulario */
 .form-control {
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  padding: 10px;
-  transition: border-color 0.3s;
+border: 1px solid #ccc; /* Borde gris claro alrededor de los campos */
+border-radius: 4px; /* Bordes redondeados */
+padding: 10px; /* Espaciado dentro de los campos */
+transition: border-color 0.3s; /* Transición suave para el color del borde */
 }
 
+/* Estilo para los campos cuando están enfocados (es decir, cuando el usuario hace clic en ellos) */
 .form-control:focus {
-  border-color: #cc0d0d;
-  box-shadow: 0 0 5px rgba(194, 14, 8, 0.5);
+border-color: #cc0d0d; /* Cambia el color del borde a rojo cuando el campo está enfocado */
+box-shadow: 0 0 5px rgba(194, 14, 8, 0.5); /* Agrega una sombra roja alrededor del campo enfocado */
 }
 
+/* Estilo para el botón de envío del formulario */
 .btn-submit {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  background-color: #dd1010;
-  color: rgb(0, 0, 0);
-  border: none;
-  border-radius: 4px;
-  font-size: 1.2em;
-  cursor: pointer;
-  transition: background-color 0.3s;
+display: block; /* Hace que el botón sea un bloque, ocupando todo el ancho disponible */
+width: 100%; /* Ancho completo del contenedor */
+padding: 10px; /* Espaciado interno */
+background-color: #dd1010; /* Fondo rojo brillante */
+color: rgb(0, 0, 0); /* Color de texto negro */
+border: none; /* Elimina el borde por defecto */
+border-radius: 4px; /* Bordes redondeados */
+font-size: 1.2em; /* Tamaño de fuente más grande */
+cursor: pointer; /* Cambia el cursor a mano cuando se pasa sobre el botón */
+transition: background-color 0.3s; /* Transición suave para el color de fondo */
 }
 
-
-
+/* Estilos para el botón con efectos de hover */
 button {
-  outline: 0;
-  border: 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 140px;
-  height: 50px;
-  border-radius: 0.5em;
-  box-shadow: 0 0.625em 2em 0 rgba(255, 89, 23, 0.35);
-  overflow: hidden;
- }
- 
- button div {
-  transform: translateY(0px);
-  width: 100%;
- }
- 
- button,
- button div {
-  transition: 0.6s cubic-bezier(.16,1,.3,1);
- }
- 
- button div span {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  height: 50px;
-  padding: 0.75em 1.125em;
- }
- 
- button div:nth-child(1) {
-  background-color: #cf0808;
- }
- 
- button div:nth-child(2) {
-  background-color: #000000;
- }
- 
- button:hover {
-  box-shadow: 0 0.1000em 4em 0 rgba(216, 13, 13, 0.35);
- }
- 
- button:hover div {
-  transform: translateY(-50px);
- }
- 
- button p {
-  font-size: 17px;
-  font-weight: bold;
-  color: #ffffff;
- }
- 
- button:active {
-  transform: scale(0.95);
- }
+outline: 0; /* Elimina el contorno predeterminado del botón */
+border: 0; /* Elimina el borde */
+display: flex; /* Usa flexbox para la disposición interna */
+flex-direction: column; /* Organiza los elementos dentro del botón en una columna */
+width: 100%; /* Ancho completo */
+max-width: 140px; /* Establece un ancho máximo */
+height: 50px; /* Altura fija */
+border-radius: 0.5em; /* Bordes redondeados */
+box-shadow: 0 0.625em 2em 0 rgba(255, 89, 23, 0.35); /* Sombra alrededor del botón */
+overflow: hidden; /* Oculta cualquier contenido que sobresalga */
+}
 
- @media (min-width: 300px) and (max-width: 700px){
-  img{
-      padding-left: 20%;
-      text-align: center;
-      
-     
-      
- 
+/* Estilo para el contenido interno del botón */
+button div {
+transform: translateY(0px); /* Desplazamiento vertical del contenido */
+width: 100%; /* Asegura que el contenido ocupe el 100% del ancho */
+}
+
+/* Transición de transformación del contenido cuando el botón es interactuado */
+button,
+button div {
+transition: 0.6s cubic-bezier(.16,1,.3,1); /* Transición suave con una curva de Bezier personalizada */
+}
+
+/* Estilo para el texto dentro del botón */
+button div span {
+display: flex; /* Usar flexbox para organizar los elementos dentro del botón */
+align-items: center; /* Centra los elementos verticalmente */
+justify-content: space-between; /* Distribuye los elementos horizontalmente */
+height: 50px; /* Altura fija para los elementos dentro del botón */
+padding: 0.75em 1.125em; /* Espaciado interno */
+}
+
+/* Estilo para la primera parte del contenido del botón */
+button div:nth-child(1) {
+background-color: #cf0808; /* Fondo rojo para la primera parte */
+}
+
+/* Estilo para la segunda parte del contenido del botón */
+button div:nth-child(2) {
+background-color: #000000; /* Fondo negro para la segunda parte */
+}
+
+/* Efecto de hover (cuando el usuario pasa el cursor sobre el botón) */
+button:hover {
+box-shadow: 0 0.1000em 4em 0 rgba(216, 13, 13, 0.35); /* Sombra de resalte al pasar el cursor */
+}
+
+/* Efecto de hover en el contenido dentro del botón */
+button:hover div {
+transform: translateY(-50px); /* Mueve el contenido hacia arriba cuando el cursor está sobre el botón */
+}
+
+/* Estilo para el texto dentro del botón */
+button p {
+font-size: 17px; /* Tamaño de la fuente */
+font-weight: bold; /* Hace el texto en negrita */
+color: #ffffff; /* Color blanco */
+}
+
+/* Efecto de click (cuando el usuario hace clic en el botón) */
+button:active {
+transform: scale(0.95); /* Reduce ligeramente el tamaño del botón para simular un "click" */
+}
+
+/* Estilos específicos para pantallas de entre 300px y 700px de ancho */
+@media (min-width: 300px) and (max-width: 700px) {
+img {
+  padding-left: 20%; /* Aplica un padding izquierdo de 20% a las imágenes */
+  text-align: center; /* Centra las imágenes */
 }
 }

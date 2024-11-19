@@ -8,6 +8,9 @@
         <!--Email del usuario-->
         <mat-form-field appearance="fill">
           <mat-label><br>Ingrese su email</mat-label>
+          <!-- mat-input: aplica un estilo visual a los campos de entrada para hacerlos más atractivos
+           es la directiva que permite realizar la vinculación bidireccional entre el valor del input 
+           y el modelo en el componente.-->
           <input [(ngModel)]="usuarios.email" matInput placeholder="Ej: usuario123@gmail.com" required>
           <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
         </mat-form-field>

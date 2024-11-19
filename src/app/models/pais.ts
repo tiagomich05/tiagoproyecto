@@ -1,3 +1,4 @@
+//exporta los datos de la interfaz pais.
 export interface Pais {
     id: string;
     nombre:string;
